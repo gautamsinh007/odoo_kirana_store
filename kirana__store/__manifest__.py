@@ -35,12 +35,13 @@
     'demo': [
         'demo/demo.xml',
     ],
+    
     'images':['static/description/a.jpeg'],
-    'icon':['static/description/op.png'],
-    
-    
+    'icon':['static/description/icon.png'],
+
     'installable' : True,
     'application' : True,
     'auto_install' : False ,
     'license':'LGPL-3'
+    
 }
