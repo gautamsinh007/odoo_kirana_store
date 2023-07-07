@@ -1,7 +1,7 @@
 <odoo>
   <data>
 
-
+<!-- sdnfjkffksjnfndjsnfnsdjfhnsjunnsfjds -->
 
     <record model="ir.ui.view" id="kirana__store_view_form">
       <field name="name">Kirana_Store form</field>
