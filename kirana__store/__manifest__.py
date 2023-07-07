@@ -7,7 +7,7 @@
         subtitle on modules listing or apps.openerp.com""",
 
     'description': " This module provides XYZ functionality for Odoos',",
-   'summary': 'This module provides XYZ functionality for Odoo. ',     
+   'summary': 'Kirana stores are shops that serve daily needs products and commonly used grocery items, ',     
         
 
 
