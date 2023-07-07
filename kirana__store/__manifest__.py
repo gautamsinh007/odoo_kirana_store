@@ -10,7 +10,7 @@
         
         
     """,
-    'description': '<p>  Grocery store  A grocery store (AE), grocery shop (BE) or simply grocery is a retail store that primarily retails a general range of food products, which may be fresh or packaged </p>',
+    'description': '<p>  <strong> Grocery store  A grocery store (AE), grocery shop (BE) or simply grocery is a retail store that primarily retails a general range of food products, which may be fresh or packaged  </strong> </p>',
 
     'author': "Gautamsinh Makwana",
     'website': "https://www.yourcompany.com",
