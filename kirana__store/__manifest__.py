@@ -6,11 +6,10 @@
         Short (1 phrase/line) summary of the module's purpose, used as
         subtitle on modules listing or apps.openerp.com""",
 
-    'description': """
+    'description': "<p>This module provides XYZ functionality for Odoo.</p><ul><li>Feature 1</li><li>Feature 2</li></ul>',",
         
         
-    """,
-    'description': '<p>  <strong> Grocery store  A grocery store (AE), grocery shop (BE) or simply grocery is a retail store that primarily retails a general range of food products, which may be fresh or packaged  </strong> </p>',
+
 
     'author': "Gautamsinh Makwana",
     'website': "https://www.yourcompany.com",
