@@ -6,7 +6,7 @@
         Short (1 phrase/line) summary of the module's purpose, used as
         subtitle on modules listing or apps.openerp.com""",
 
-    'description': "<p>This module provides XYZ functionality for Odoo.</p><ul><li>Feature 1</li><li>Feature 2</li></ul>',",
+    'description': " This module provides XYZ functionality for Odoos',",
    'summary': 'This module provides XYZ functionality for Odoo. ',     
         
 
