@@ -12,7 +12,7 @@
         A grocery store (AE), grocery shop (BE) or simply grocery is a retail store that primarily retails a general range of food products, which may be fresh or packaged 
     """,
 
-    'author': "My Company",
+    'author': "Gautamsinh Makwana",
     'website': "https://www.yourcompany.com",
 
     # Categories can be used to filter modules in modules listing
