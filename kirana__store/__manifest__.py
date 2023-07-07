@@ -7,7 +7,7 @@
         subtitle on modules listing or apps.openerp.com""",
 
     'description': "<p>This module provides XYZ functionality for Odoo.</p><ul><li>Feature 1</li><li>Feature 2</li></ul>',",
-   'summary': '<p>This module provides XYZ functionality for Odoo.</p><ul><li>Feature 1</li><li>Feature 2</li></ul>',     
+   'summary': 'This module provides XYZ functionality for Odoo. ',     
         
 
 
