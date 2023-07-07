@@ -7,7 +7,9 @@
         subtitle on modules listing or apps.openerp.com""",
 
     'description': """
-        Long description of module's purpose
+        
+        Grocery store   
+        A grocery store (AE), grocery shop (BE) or simply grocery is a retail store that primarily retails a general range of food products, which may be fresh or packaged 
     """,
 
     'author': "My Company",
@@ -33,4 +35,5 @@
     'demo': [
         'demo/demo.xml',
     ],
+    'images':['static/description/a.jpeg']
 }
