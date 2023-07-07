@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': "Kirana_Store",
-
+   
     'summary': """
         Short (1 phrase/line) summary of the module's purpose, used as
         subtitle on modules listing or apps.openerp.com""",
@@ -36,5 +36,11 @@
         'demo/demo.xml',
     ],
     'images':['static/description/a.jpeg'],
-    'icon':['static/description/op.png']
+    'icon':['static/description/op.png'],
+    
+    
+    'installable' : True,
+    'application' : True,
+    'auto_install' : False ,
+    'license':'LGPL-3'
 }
