@@ -9,8 +9,6 @@
     'description': " This module provides XYZ functionality for Odoos',",
    'summary': 'Kirana stores are shops that serve daily needs products and commonly used grocery items, ',     
         
-    'price': "10.0",
-    'currency':'USD',   
 
     'author': "Gautamsinh Makwana",
     'website': "https://www.yourcompany.com",
