@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "Kirana_Store",
+    'name': "Kirana Store",
    
     'summary': """
         Short (1 phrase/line) summary of the module's purpose, used as
