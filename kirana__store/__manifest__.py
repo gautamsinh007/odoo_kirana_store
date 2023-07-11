@@ -34,7 +34,7 @@
         'demo/demo.xml',
     ],
     
-    'images':['static/description/ab.mp4'],
+    'images':['static/description/a.gif'],
     'icon':['static/description/icon.png'],
 
     'installable' : True,
