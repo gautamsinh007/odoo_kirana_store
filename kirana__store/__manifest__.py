@@ -6,8 +6,8 @@
         Short (1 phrase/line) summary of the module's purpose, used as
         subtitle on modules listing or apps.openerp.com""",
 
-    'description': " This module provides XYZ functionality for Odoos',",
-   'summary': 'Kirana stores are shops that serve daily needs products and commonly used grocery items, ',     
+    'description': "Kirana stores are shops that serve daily needs products and commonly used grocery items",
+   'summary': 'Kirana stores are shops that serve daily needs products and commonly used grocery items',     
         
 
     'author': "Gautamsinh Makwana",
@@ -34,7 +34,7 @@
         'demo/demo.xml',
     ],
     
-    'images':['static/description/a.jpeg'],
+    'images':['static/description/ab.mp4'],
     'icon':['static/description/icon.png'],
 
     'installable' : True,
