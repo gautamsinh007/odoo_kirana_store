@@ -35,7 +35,7 @@
     ],
     
     'images':['static/description/h.gif'],
-    'icon':['static/description/icon.png'],
+    'icon':['static/description/icon.png','static/description/rr.png'],
       
     'installable' : True,
     'application' : True,
