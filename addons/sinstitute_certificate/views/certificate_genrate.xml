@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="certificate_student_view_form" model="ir.ui.view" >
+        <field name="name">certificate.student.view.form</field>
+        <field name="model">certificate.student</field>
+        <field name="arch" type="xml">
+            
+            <form string="">
+                <sheet>
+                    
+                    <div class='oe_button_box' name='button_box'>
+                        <div class="oe_button_box" name="button_box">
+                            <!-- <button name="toggle_active" type="object" class="oe_stat_button" icon="fa-archive" style='background-color:LightGray;color:mediumpurple'>
+                            </button> -->
+                            <!-- <field name="activate" string="" widget="boolean_toggle" style='margin-right:30px; margin-top:20px'/> -->
+                        </div>
+                        
+                    </div>   
+                    <!-- <widget name="web_ribbon" title="Archived" bg_color="bg-danger"  attrs="{'invisible': [('active', '=', True)]}"  /> -->
+                    <group>
+                    <group>
+                                <!-- add css in inline -->
+
+                        <!-- <label for="abc" style="color: red;" >name</label> -->
+                        <!-- <field name="m2"  required="1" style='color : red;' />  -->
+                        <style>
+                            .o_form_label {
+                                color: blue !important;
+                            }
+                        </style>
+                        
+                        <field name="name"  required="1" style='color : red;' />        
+                        
+                        <field name="email" required="1" />
+                        <field name="place"  />
+                        <field name="language" />
+
+                        <field name="country_id"/>
+                           <field name="states"/>
+
+                        <field name="images" widget='image' class='oe_avatar' style="width:30px;" />
+                      
+                    </group>
+
+                      
+                    <group>
+
+                        <field name="datetime" options='{"datepicker": {"daysOfWeekDisabled": [0, 6]}}' /> 
+                        <field name="defult_datetime" options='{"datepicker": {"daysOfWeekDisabled": [5, 6]}}'/> 
+                        <field name="login_user" /> 
+                        <field name="user_company" /> 
+                        <field name="activate" string="" widget="boolean_toggle" style='margin-right:30px; margin-top:20px'/>
+
+                    </group>
+
+                </group>
+
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+<record id="certificate_student_view_tree" model="ir.ui.view">
+    <field name="name">certificate.student.view.tree</field>
+    <field name="model">certificate.student</field>
+    <field name="arch" type="xml">
+        <tree string="Certificate list">
+            <field name="name"  />
+            <field name="email"  />
+            <field name="datetime" /> 
+            <field name="defult_datetime" /> 
+            <field name="login_user" /> 
+            <field name="user_company" /> 
+            <field name="activate" /> 
+            <field name="country_id" />
+            <field name="states"/>
+            <!-- <field name="images" widget='image' class='oe_avatar'"/> -->
+
+        </tree>
+    </field>
+</record>
+
+
+
+<!--  -->
+<record id="certificate_student_action" model="ir.actions.act_window">
+
+    <field name="name">Certificate form  </field>
+    <field name="res_model">certificate.student</field>
+    <field name="view_mode">tree,form</field>
+
+</record>
+
+
+
+<!-- python function call -->
+
+<record id="action_set_salesperson" model="ir.actions.server">
+    <field name="name">Set Salesperson</field>
+    <field name="model_id" ref="sinstitute_certificate.model_certificate_student"/>
+    <field name="state">code</field>
+    <field name="code">model.call_by_menu()</field>
+</record>
+
+
+<menuitem
+    id="certificate_student_menu"
+    name="Certificate"
+    sequence="10"
+    web_icon="./static/description/icon.png"
+    />
+
+
+<menuitem
+
+    id="certificate_student_submenu"
+    name="Certificate list" 
+    sequence="10"
+    action = "certificate_student_action"
+    parent = "certificate_student_menu" /> 
+
+
+    <menuitem
+    id="certificate_student_submenus"
+    name="Certificate data"
+    sequence="10"
+    action = "certificate_student_action"
+    parent = "certificate_student_submenu" /> 
+
+
+    <menuitem
+    id="call_python_function"
+    name="call python func"
+    sequence="10"
+    action = "action_set_salesperson"
+    parent = "certificate_student_submenu" /> 
+
+
+</odoo>

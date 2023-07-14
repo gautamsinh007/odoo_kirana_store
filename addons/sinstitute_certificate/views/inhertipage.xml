@@ -1,0 +1,29 @@
+<!-- <?xml version="1.0" encoding="utf-8"?>
+<odoo> -->
+
+    
+<!-- COSTMIZATION -->
+
+    <!-- <record id="view_order_form_sale_data" model="ir.ui.view">
+        
+        <field name="name">view.order.form.sale.data</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id"  ref='sale.view_order_form' /> 
+        <field name="arch" type="xml" />
+        
+        <xpath expr="//field[@name='pricelist_id']" position="after">
+            <field name="place"/>
+        </xpath> -->
+
+
+<!--  <xpath expr="//field[@name='order_line']/tree/field[@name='tax_id']" position="after">
+            <field name="newthigs"/>
+        </xpath> 
+    
+    -->
+           
+<!-- </record>
+
+    
+
+</odoo> -->

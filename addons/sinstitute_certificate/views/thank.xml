@@ -1,0 +1,32 @@
+<!-- <?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+
+    <template id="demo_check" name="demo check">
+        <t t-call="website.layout">
+            <div id="wrap" class="oe_structure">
+                <div class="container">
+                    <div class="col-md-12">
+                           
+                        Hey.... how are you.....
+                        
+                       
+
+                </div>
+                </div>
+
+                </div>                            
+            </t>
+
+      
+                
+    </template>
+
+    <t name="Thank you" t-name="website_hr_recruitment.thankyou">
+       
+    </t>
+
+    
+
+</odoo> -->

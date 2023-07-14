@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="csvfile_load_view_form" model="ir.ui.view" >
+        <field name="name">csvfile_load.view.form</field>
+        <field name="model">csvfile.load</field>
+        <field name="arch" type="xml">
+                    <form string="">
+                        <header>
+                       
+                            <button string="file load" name="check_orm" type="object"  class="oe_highlight" />
+                            <!-- <button string="update info" name="school_profile_wizard_action" type="object"  class="oe_highlight" /> -->
+      
+                      </header> 
+                        <sheet>
+                            <group>
+
+                                <field name="name"/>
+                                <field name="price"/>
+
+                            </group>
+                        </sheet>
+                    </form>
+                </field>
+            </record>
+
+            <record id="csvfile_load_view_tree" model="ir.ui.view">
+                <field name="name">csvfile_load.view.tree</field>
+                <field name="model">csvfile.load</field>
+                <field name="arch" type="xml">
+                    <tree string="">
+
+                        <field name="name"/>
+                        <field name="price"/>
+                    </tree>
+                </field>
+            </record>  
+
+<record id="csvfile_load_action" model="ir.actions.act_window">
+
+    <field name="name">csvfile Add</field>
+    <field name="res_model">csvfile.load</field>
+    <field name="view_mode">tree,form</field>
+</record>
+
+<menuitem
+    id="csvfile_load_submenus"
+    name="csvfile data"
+    sequence="10"
+    action = "csvfile_load_action"
+    parent = "products_data_menu" /> 
+
+</odoo>

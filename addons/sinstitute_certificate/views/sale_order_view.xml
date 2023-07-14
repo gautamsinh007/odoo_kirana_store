@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    
+   <record id="sale_order_view_form_inherit" model="ir.ui.view">
+
+    
+       <field name="name">sale.order.view.form.inherit</field>
+       <field name="model">sale.order</field>
+       <field name="inherit_id" ref="sale.view_order_form"/>
+     
+    
+           <field name="arch" type="xml">
+
+            <!-- form in field add  -->
+
+                <xpath expr="//field[@name = 'payment_term_id']" position="before">
+                    <field name="test" /> 
+                </xpath>
+
+                <xpath expr="//field[@name = 'payment_term_id']" position="after">
+                    <field name="staff_id" /> 
+                 </xpath>
+
+
+
+              <!-- attributes set  -->
+
+                <xpath expr="//field[@name = 'payment_term_id']" position="attributes">
+                    <attribute name="readonly"></attribute>
+                </xpath>
+
+               
+         
+            <!-- <xpath expr="//field[@name = 'payment_term_id']" position="attributes">
+                <attribute name="invisible" ></attribute>
+             </xpath> -->
+
+              <!-- for addign extra field in under form  expr="//notebook/page[@name='other_information']  "position="after"-->
+
+               <xpath expr="//notebook" position="inside">
+                <page string="Staff">
+                    
+            
+                    <group>
+
+                        <!-- <style>
+                            .o_form_view .o_form_sheet_bg > .o_form_sheet {
+                                background: #5c9bda; !important;
+                                
+                            }
+
+                            .o_form_view .o_form_statusbar{
+                                background-color: #932121 !important;
+                            }
+                        </style> -->
+                        
+                        <field name="test" />
+                        <field name="staff_id" />
+
+
+                    </group>
+                </page>
+            </xpath>
+
+       </field>
+
+
+   </record>
+
+   <record id="sale_order_view_tree_inherit" model="ir.ui.view">
+    <field name="name">sale.order.view.tree.inherit</field>
+    <field name="model">sale.order</field>
+    <field name="inherit_id" ref="sale.view_quotation_tree_with_onboarding"/>
+  
+ 
+    <field name="arch" type="xml">
+        
+     <xpath expr="//field[@name = 'user_id']" position="before">
+            <field name="test" /> 
+            <field name="staff_id" /> 
+     </xpath>
+
+     <!-- <xpath expr="//field[@name = 'user_id']" position="after">
+        
+  </xpath> -->
+
+
+    </field>
+
+
+    <!-- <record id="sale_order_view_search_inherit" model="ir.ui.view">
+        <field name="name">sale.order.view.search.inherit</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.sale_order_view_search_inherit_quotation"/>
+     
+            <field name="arch" type="xml">
+       
+                <xpath expr="//search" position="inside">
+                    <field name="test" /> 
+                    <field name="staff_id" /> 
+                </xpath>
+
+            </field>
+
+    </record> -->
+
+
+</record>
+
+
+<!-- existing model in add new menutype -->
+
+
+<menuitem
+
+    id="sale_orders_menuitems"
+    name="new_menu_added"
+    action = 'certificate_student_action'
+    parent = 'sale.sale_order_menu'/>
+ 
+
+
+</odoo>
