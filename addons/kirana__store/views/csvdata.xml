@@ -45,7 +45,7 @@
 
 <menuitem
     id="csvfile_load_submenus"
-    name="csvfile data"
+    name="Product File Uplaod"
     sequence="10"
     action = "csvfile_load_action"
     parent = "products_data_menu" /> 

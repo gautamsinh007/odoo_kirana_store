@@ -81,7 +81,6 @@ class Csvload(models.Model):
                 y = row['price']
                 print(x,y)
                 
-    
     @api.model
     def create(self,values):
         # Specify the path to your CSV file
@@ -95,15 +94,14 @@ class Csvload(models.Model):
                 x = row['itemDescription']
                 y = row['price']
                 print(x)
-                val = [
-                    {
-                    values['name']: x,
-                    values['price']: y
-                    }
-                ]
+                # val = [
+                #     {
+                values['name']= x
+                values['price'] = y
+                #     }
+                # ]
 
                 print(values,'-==-')
-                datas = super(Csvload, self).create(val)
+                datas = super(Csvload, self).create(values)
                 print(datas)     
-        return datas
-   
+            return datas
