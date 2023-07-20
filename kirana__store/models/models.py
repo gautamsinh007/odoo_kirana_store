@@ -1,41 +1,26 @@
 # -*- coding: utf-8 -*- thsis si si snew add 
-
 from odoo import models, fields, api
-
-
-# class kirana__store(models.Model):
-#     _name = 'kirana__store.kirana__store'
-#     _description = 'kirana__store.kirana__store'
-
-#     name = fields.Char()
-#     value = fields.Integer()
-#     value2 = fields.Float(compute="_value_pc", store=True)
-#     description = fields.Text()
-
-#     @api.depends('value')
-#     def _value_pc(self):
-#         for record in self:
-#             record.value2 = float(record.value) / 100
 
 
 class Products(models.Model):
     _name = 'products.data'
     _description = 'products detailes '
+    _order  =  'product_name'
     
-    product_name  = fields.Char()
-    product_price = fields.Integer()
-    product_quntity = fields.Integer()
-    abc = fields.Integer()
-    totel = fields.Integer(compute="_value_pc", store=True)
-
-    @api.depends('product_price','product_quntity')
-    def _value_pc(self):
-        for rec in self:
-            ctc = 0
-            if rec.product_price:
-                ctc += rec.product_price 
-            if rec.product_quntity:
-                ctc *= rec.product_quntity 
-                    
-            rec.totel = ctc
-  
+    product_name  = fields.Char(string='product_name')
+    quantity = fields.Char(string='quantity', null=True) 
+    
+    
+class Buyproducts(models.Model):
+    _name = 'products.buy'
+    _description = 'products buy detailes '      
+    _order  =  'groceries'
+            
+    groceries = fields.Many2many('products.data', string='groceries')      
+    user = fields.Many2one('res.users', string='user')
+    mail_send = fields.Char(string='mail_send', default=lambda self: self.env.user.login)
+    
+    def check_orm(self):
+        templates_id = self.env.ref('kirana__store.products_send_email_template').id
+        tem = self.env['mail.template'].browse(templates_id)
+        tem.send_mail(self.id, force_send=True)   

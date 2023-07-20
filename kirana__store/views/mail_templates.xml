@@ -1,0 +1,28 @@
+<odoo>
+    <!-- Note : in html field  do not use any line content  without tag.  use this way: <p> your content </p> -->
+    <data noupdate="1">
+        <record id="products_send_email_template" model="mail.template">
+            <field name="name">Products Detailes: Sending</field>
+            <field name="model_id" ref="model_products_buy"/>
+            <field name="email_from"> {{object.mail_send or ''}}</field>
+            <field name="email_to">{{object.user.login or ''}}</field>
+            <field name="subject">{{object.mail_send}} Product buy (Ref {{object.mail_send}})</field>
+            <field name="description">Product buy detailes</field>
+        
+                <field name="body_html" type="html">
+                        
+                    <p> Dear <span t-field="object.user.login"/></p>    
+                 
+                    <p> Here are the product details </p>  
+                    <t t-foreach="object.groceries" t-as="i">
+                        <p><t t-out="i.product_name"/></p>
+                        <p><t t-out="i.quantity"/></p>
+                    </t>
+                    
+                    <p> Do not hesitate to contact us if you have any questions. <span t-field="object.mail_send"/> </p> 
+
+                 </field>
+                
+        </record>
+    </data>
+</odoo>
