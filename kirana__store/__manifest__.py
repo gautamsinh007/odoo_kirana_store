@@ -9,7 +9,6 @@
     'description': "Kirana stores are shops that serve daily needs products and commonly used grocery items",
    'summary': 'Kirana stores are shops that serve daily needs products and commonly used grocery items',     
         
-
     'author': "Gautamsinh Makwana",
     'website': "https://www.yourcompany.com",
 
@@ -18,7 +17,6 @@
     # for the full list
     'category': 'Tutorials',
    
-
     # any module necessary for this one to work correctly
     'depends': ['base', 'mail'],
 
