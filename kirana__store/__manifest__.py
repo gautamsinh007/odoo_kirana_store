@@ -34,7 +34,7 @@
         'demo/demo.xml',
     ],
     
-    'images':['static/description/h.gif'],
+    'images':['static/description/h.gif' , 'static/description/mail_send.png'],
     'icon':['static/description/icon.png','static/description/rr.png'],
       
     'installable' : True,
