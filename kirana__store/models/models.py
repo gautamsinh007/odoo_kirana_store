@@ -28,13 +28,13 @@ class Saledata(models.Model):
         templates_id = self.env.ref('kirana__store.send_products_email_template').id
         print(templates_id,'-=-=-=')
         tem = self.env['mail.template'].browse(templates_id)
-        tem.send_mail(self.id, force_send=True) 
-    
+        tem.send_mail(self.id, force_send=True)  
+        
                         
 class ProductQuality(models.Model):
     
     _name = 'product.quality'        
-        
+    
     product_id = fields.Many2one('products.data') 
     price = fields.Char(string='price')   
     qty  = fields.Char(string='qty')    
