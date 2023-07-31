@@ -1,26 +1,44 @@
 # -*- coding: utf-8 -*- thsis si si snew add 
+
 from odoo import models, fields, api
+import smtplib
+import csv
+import base64, io
 
 
 class Products(models.Model):
     _name = 'products.data'
-    _description = 'products detailes '
-    _order  =  'product_name'
+    _description = 'products detailes'
+    _order  =  'name'
+
+    name  = fields.Char(string='name')
+
+
+class Saledata(models.Model):
+    _name = 'sale.data'
+    _order  =  'name'
     
-    product_name  = fields.Char(string='product_name')
-    quantity = fields.Char(string='quantity', null=True) 
-    
-    
-class Buyproducts(models.Model):
-    _name = 'products.buy'
-    _description = 'products buy detailes '      
-    _order  =  'groceries'
-            
-    groceries = fields.Many2many('products.data', string='groceries')      
-    user = fields.Many2one('res.users', string='user')
-    mail_send = fields.Char(string='mail_send', default=lambda self: self.env.user.login)
-    
+    name = fields.Char(string='name')
+    productqty = fields.One2many('product.quality', 'saledata' , string='productqty')
+    mail_send = fields.Char(string='your mail', default=lambda self: self.env.user.login)
+    user = fields.Many2one('res.users', string='seller mail')
+    date  = fields.Datetime(string='Need product')
+  
     def check_orm(self):
-        templates_id = self.env.ref('kirana__store.products_send_email_template').id
+        templates_id = self.env.ref('kirana__store.send_products_email_template').id
+        print(templates_id,'-=-=-=')
         tem = self.env['mail.template'].browse(templates_id)
-        tem.send_mail(self.id, force_send=True)   
+        tem.send_mail(self.id, force_send=True) 
+    
+                        
+class ProductQuality(models.Model):
+    
+    _name = 'product.quality'        
+        
+    product_id = fields.Many2one('products.data') 
+    price = fields.Char(string='price')   
+    qty  = fields.Char(string='qty')    
+    saledata = fields.Many2one('sale.data', string='saledata')    
+
+
+

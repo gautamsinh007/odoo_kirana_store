@@ -23,18 +23,17 @@
     # always loaded
     'data': [
         'security/ir.model.access.csv',
-        'views/views.xml',
-        'views/templates.xml',
         'views/products.xml',
-        'views/buyproducts.xml',
-        'views/mail_templates.xml',
+        'views/sale_data.xml',
+        'views/mail_product.xml',
+        'views/demo.xml',
     ],  
     # only loaded in demonstration mode
     'demo': [
         'demo/demo.xml',
     ],
     
-    'images':['static/description/h.gif' , 'static/description/mail_send.png'],
+    'images':['static/description/h.gif'],
     'icon':['static/description/icon.png','static/description/rr.png'],
       
     'installable' : True,

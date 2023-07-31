@@ -1,30 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-
-
-            
+      
      <record id="products_data_view_form" model="ir.ui.view" >
         <field name="name">products_data.view.form</field>
         <field name="model">products.data</field>
         <field name="arch" type="xml">
 
                     <form string="">
+                        <header>
+                            
+                            <!-- <button string="Email Send" name="send_email" type="object"  class="oe_highlight" /> -->
+                            <!-- <button string="update info" name="school_profile_wizard_action" type="object"  class="oe_highlight" /> -->
+
+                      </header> 
                         <sheet>
                             <group>
 
-                                <field name="product_name"/>
-                                 <field name="product_price"/>
-                                  <field name="product_quntity"/>
-                                    <field name="totel"/> 
-                                      <field name="abc"/>
-                                 
+                                <field name="name"/>
+                   
+                          
                             </group>
                         </sheet>
                     </form>
                 </field>
             </record>
-
-
 
             <record id="products_data_view_tree" model="ir.ui.view">
                 <field name="name">products_data.view.tree</field>
@@ -32,38 +31,30 @@
                 <field name="arch" type="xml">
                     <tree string="">
 
-                        <field name="product_name"/>
-                        <field name="product_price"/>
-                        <field name="product_quntity"/>
-                        <field name="totel"/> 
-                        <field name="abc"/>
-
+                        <field name="name"/>
+                       
                     </tree>
                 </field>
             </record>       
 
 
-
 <record id="products_data_action" model="ir.actions.act_window">
 
-    <field name="name">products_data form  </field>
+    <field name="name">Products Add</field>
     <field name="res_model">products.data</field>
     <field name="view_mode">tree,form</field>
-
 </record>
 
 <menuitem
     id="products_data_menu"
-    name="products"
-    sequence="10" />
-
+    name="Products"
+    sequence="10"/>
 
 <menuitem
     id="products_data_submenus"
-    name="products data"
+    name="Products Data"
     sequence="10"
     action = "products_data_action"
     parent = "products_data_menu" /> 
  
-
 </odoo>

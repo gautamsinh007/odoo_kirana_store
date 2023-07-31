@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="sale_data_view_form" model="ir.ui.view" >
+        <field name="name">sale_data.view.form</field>
+        <field name="model">sale.data</field>
+        <field name="arch" type="xml">
+
+                    <form string="">
+                        <header>
+                       
+                            <button string="send mail" name="check_orm" type="object"  class="oe_highlight" />
+                            <!-- <button string="update info" name="school_profile_wizard_action" type="object"  class="oe_highlight" /> -->
+      
+                      </header> 
+                        <sheet>
+
+                           <group>
+
+                                <field name="name"/>
+                                <field name="user"/>
+                                <field name="mail_send"/>
+                          
+                            </group>
+
+                        <notebook>
+                                <page name="demo_fields_liness" string="Product Add" >
+                
+                                            <form string='demo fieldss'>
+                                                <field name="productqty"/>
+                                            </form>                 
+                                         
+                                </page>
+
+                        </notebook> 
+                   
+            </sheet>
+
+                    </form>
+                </field>
+        </record>   
+
+
+            <record id="sale_data_view_tree" model="ir.ui.view">
+                <field name="name">sale_data.view.tree</field>
+                <field name="model">sale.data</field>
+                <field name="arch" type="xml">
+                    <tree string="">
+
+                        <field name="name"/>
+                        <field name="productqty"/>
+                        <field name="user"/>
+                        <field name="mail_send"/>
+                        <field name="create_date"/>
+                      
+                    </tree>
+                </field>
+            </record>  
+
+
+
+<record id="sale_data_action" model="ir.actions.act_window">
+
+    <field name="name">Product Add</field>
+    <field name="res_model">sale.data</field>
+    <field name="view_mode">tree,form</field>
+</record>
+
+
+<menuitem
+    id="sale_data_submenus"
+    name="Buy data"
+    sequence="10"
+    action = "sale_data_action"
+    parent = "products_data_menu"/> 
+
+</odoo>
