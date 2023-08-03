@@ -79,6 +79,8 @@
     <field name="name">Product Add</field>
     <field name="res_model">purchase.data</field>
     <field name="view_mode">tree,form</field>
+    <field name="context">{'dynamic_domain': True}</field>
+    
 </record>
 
 

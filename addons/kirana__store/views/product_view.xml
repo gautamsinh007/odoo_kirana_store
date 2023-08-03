@@ -23,7 +23,7 @@
     <field name="name">Product view</field>
     <field name="res_model">purchase.data</field>
     <field name="view_mode">tree</field>
-
+    <field name="context">{'dynamic_domain': True}</field>
 
 </record>
 

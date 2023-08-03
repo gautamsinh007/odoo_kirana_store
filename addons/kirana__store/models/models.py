@@ -251,6 +251,28 @@ class PurchaseProduct(models.Model):
         print(self.user.login)
         search_var = self.env['purchase.data'].search([('user','=', self.env.user.login)])  
         print(search_var,'-=-=-=-=')
+        
+        
+    @api.model
+    def search(self, args, offset=0, limit=None, order=None, count=False):
+        if self._context.get('dynamic_domain', False):
+            domain = self._get_dynamic_domain()
+            args += domain
+        return super(PurchaseProduct, self).search(args, offset=offset, limit=limit, order=order, count=count)
+
+    # Method to get the dynamic domain based on the current user's department
+    @api.model
+    def _get_dynamic_domain(self):
+        # current_user = self.env.user
+        # if current_user and current_user.department_id:
+        domain = [('mail_send', '=',self.env.user.login )]
+        # else:
+        #     domain = []
+        return domain
+    
+        
+        
+        
                   
                   
 class ProductQuality(models.Model):
