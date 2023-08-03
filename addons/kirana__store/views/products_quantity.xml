@@ -77,6 +77,13 @@
             </field>   -->
 
 
+
+            
+
+
+
+
+
     <record id="product_quality_action" model="ir.actions.act_window">
 
         <field name="name">saledata Add</field>
@@ -85,6 +92,7 @@
         <!-- <field name="domain">[('login_user','=', 'makwanagautam199@gmail.com' )]</field>  -->
         <!-- <field name="domain">[('login_user', '=', 'makwanagautam199@gmail.com' )]</field>  -->
         <field name="context">{'dynamic_domain': True}</field>
+
     </record>
 
 

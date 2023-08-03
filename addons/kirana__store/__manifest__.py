@@ -17,6 +17,7 @@
 
     'data': [
         'security/ir.model.access.csv',
+        'security/security.xml', 
         'views/templates.xml',
         'views/products.xml',
         'views/csvdata.xml',
@@ -26,8 +27,8 @@
         'views/purchase_data.xml',
         'views/products_quantity.xml',
         'views/mail_product.xml',
-        'views/product_view.xml'
-     
+        'views/product_view.xml',
+    
     ],
     
     'demo': [
@@ -39,6 +40,4 @@
     'auto_install' : False ,
     'license':'LGPL-3',
 }
-
-
 
