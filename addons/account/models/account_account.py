@@ -42,6 +42,7 @@ class AccountAccount(models.Model):
     deprecated = fields.Boolean(default=False, tracking=True)
     used = fields.Boolean(compute='_compute_used', search='_search_used')
     account_type = fields.Selection(
+        
         selection=[
             ("asset_receivable", "Receivable"),
             ("asset_cash", "Bank and Cash"),
@@ -62,11 +63,13 @@ class AccountAccount(models.Model):
             ("expense_direct_cost", "Cost of Revenue"),
             ("off_balance", "Off-Balance Sheet"),
         ],
+        
         string="Type", tracking=True,
         required=True,
         compute='_compute_account_type', store=True, readonly=False, precompute=True,
         help="Account Type is used for information purpose, to generate country-specific legal reports, and set the rules to close a fiscal year and generate opening entries."
     )
+    
     include_initial_balance = fields.Boolean(string="Bring Accounts Balance Forward",
         help="Used in reports to know if we should consider journal items from the beginning of time instead of from the fiscal year only. Account types that should be reset to zero at each new fiscal year (like expenses, revenue..) should not have this option set.",
         compute="_compute_include_initial_balance",
@@ -82,6 +85,7 @@ class AccountAccount(models.Model):
         ],
         string="Internal Group", readonly=True, compute="_compute_internal_group", store=True
     )
+    
     #has_unreconciled_entries = fields.Boolean(compute='_compute_has_unreconciled_entries',
     #    help="The account has at least one unreconciled debit and credit since last time the invoices & payments matching was performed.")
     reconcile = fields.Boolean(string='Allow Reconciliation', tracking=True,

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="product_quality_view_form" model="ir.ui.view">
+        <field name="name">product_quality.view.form</field>
+        <field name="model">product.quality</field>
+        <field name="arch" type="xml">
+
+            <form string="">
+
+                <sheet>
+
+                    <group>
+
+                        <field name="product_id" />
+
+                        <field name="quantity" />
+                        <field name="purchasedata" invisible="1" />
+                        <field name="login_user"  />
+                      
+                    </group>
+
+                    <notebook>
+                        <page name="demo_fields_liness" string="demos fields" editable="botttom">
+
+                            <group>
+
+                                <tree editable='bottom'>
+                                    <field name="product_id" />
+
+                                    <field name="quantity" />
+                                    <field name="purchasedata" invisible="1" />
+                                   
+                                </tree>
+                                
+                                <form string='demo fieldss' editable="bottom">
+
+                                    <field name="product_id" />
+
+                                    <field name="quantity" />
+                                    <field name="purchasedata" />
+                                   
+                                </form>
+                           
+                            </group>
+
+                        </page>
+
+                    </notebook>
+
+                </sheet>
+
+            </form>
+        </field>
+    </record>
+
+    <record id="product_quality_view_tree" model="ir.ui.view">
+        <field name="name">product_quality.view.tree</field>
+        <field name="model">product.quality</field>
+        <field name="arch" type="xml">
+
+            <tree string="">
+
+                <field name="product_id" />
+                <field name="quantity"  />
+                <field name="purchasedata"  />
+                <field name="login_user"  />
+                <!-- <field name="user_product"  /> -->
+
+            </tree>
+        </field>
+    </record>
+
+        <!--  
+            <field name="body_html" type="html">
+                <p> Here are the product details </p>  
+            </field>   -->
+
+
+    <record id="product_quality_action" model="ir.actions.act_window">
+
+        <field name="name">saledata Add</field>
+        <field name="res_model">product.quality</field>
+        <field name="view_mode">tree,form</field>
+        <!-- <field name="domain">[('login_user','=', 'makwanagautam199@gmail.com' )]</field>  -->
+        <!-- <field name="domain">[('login_user', '=', 'makwanagautam199@gmail.com' )]</field>  -->
+        <field name="context">{'dynamic_domain': True}</field>
+    </record>
+
+
+    <menuitem
+        id="product_quality_submenus"
+        name="product qualitys"
+        sequence="10"
+        action="product_quality_action"
+        parent="products_data_menu" />
+
+
+</odoo>

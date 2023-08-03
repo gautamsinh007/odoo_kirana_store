@@ -1,5 +1,10 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_products.data,products_data,model_products_data,base.group_user,1,1,1,1
 access_csvfile.load,csvfile_load,model_csvfile_load,base.group_user,1,1,1,1
+access_products.buy,products_buy,model_products_buy,base.group_user,1,1,1,1
+access_product.stock,product_stock,model_product_stock,base.group_user,1,1,1,1
+access_product.qua,product_qua,model_product_qua,base.group_user,1,1,1,1
+access_product.quality,product_quality,model_product_quality,base.group_user,1,1,1,1
+access_purchase.data,purchase_data,model_purchase_data,base.group_user,1,1,1,1
 
 

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="products_buy_view_form" model="ir.ui.view">
+        <field name="name">products_buy.view.form</field>
+        <field name="model">products.buy</field>
+        <field name="arch" type="xml">
+
+            <form string="">
+
+                <header>
+                    <!-- <button string="show" name="prodetailes" type="object"  class="oe_highlight"
+                    /> -->
+                    <button string="Send Email" name="check_orm" type="object" class="oe_highlight" />
+                </header>
+
+                <sheet>
+
+                    <group>
+
+                        <field name="user" />
+                        <field name="groceries" />
+                        <field name="mail_send" />
+                        <field name="quantity" widget="one2many_list" />
+
+                        <!-- <field name="extdata"/> -->
+                        <!-- <field name="extdata2"/> -->
+
+                    </group>
+
+                    <!-- <div class="oe_chatter">
+                            <field name="message_follower_ids" groups="base.group_user"/>
+                            <field name="message_ids"/>
+                        </div> -->
+
+                    <notebook>
+                        <page name="demo_fields_liness" string="demos fields">
+
+
+                            <form string='demo fieldss'>
+                                <group>
+
+                                    <field name="user" />
+                                    <field name="groceries" />
+                                    <field name="quantity" widget="one2many_list" />
+                                    <!-- <field name="extdata"/> -->
+                                    <!-- <field name="extdata2"/> -->
+                                </group>
+                            </form>
+                        </page>
+                    </notebook>
+
+                </sheet>
+
+            </form>
+        </field>
+    </record>
+
+    <record id="products_buy_view_tree" model="ir.ui.view">
+        <field name="name">products_buy.view.tree</field>
+        <field name="model">products.buy</field>
+        <field name="arch" type="xml">
+            <tree string="">
+
+                <field name="user" />
+                <field name="groceries" />
+                <field name="mail_send" />
+
+            </tree>
+        </field>
+    </record>
+
+
+    <!--       
+            <field name="body_html" type="html">
+                <p> Here are the product details </p>  
+            </field> -->
+
+
+    <record id="products_buy_action" model="ir.actions.act_window">
+
+        <field name="name">productsbuy Add</field>
+        <field name="res_model">products.buy</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+        id="products_buy_submenus"
+        name="Product File Uplaod"
+        sequence="10"
+        action="products_buy_action"
+        parent="products_data_menu" />
+
+</odoo>

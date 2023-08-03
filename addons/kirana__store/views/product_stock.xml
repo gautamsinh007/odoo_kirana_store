@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="product_stock_view_form" model="ir.ui.view" >
+        <field name="name">product_stock.view.form</field>
+        <field name="model">product.stock</field>
+        <field name="arch" type="xml">
+
+                    <form string="">
+
+                        <sheet>
+
+                            <group>
+
+                                <field name="p_name"/>
+                                <field name="p_quantity"/>
+                           
+                            </group>
+
+
+                            <notebook>
+                                <page name="demo_fields_liness" string="demos fields" editable="botttom">
+                
+                                  
+                
+                                    <group>
+                                        
+                                        <tree editable='bottom'>
+                                            <field name="p_name"/>
+                                            <field name="p_quantity"/>
+                                        </tree>       
+                                            <form string='demo fieldss'>
+                                                <field name="p_name"/>
+                                                <field name="p_quantity"/>
+                                            </form>
+                                                </group>
+                            </page>
+
+
+                          
+
+
+                        </notebook>   
+                   
+            </sheet>
+
+                    </form>
+                </field>
+        </record>   
+
+            <record id="product_stock_view_tree" model="ir.ui.view">
+                <field name="name">product_stock.view.tree</field>
+                <field name="model">product.stock</field>
+                <field name="arch" type="xml">
+                    <tree string="">
+
+                        <field name="p_name"/>
+                        <field name="p_quantity"/>
+                      
+                    </tree>
+                </field>
+            </record>  
+
+<!--       
+            <field name="body_html" type="html">
+                <p> Here are the product details </p>  
+            </field> -->
+
+
+
+<record id="product_stock_action" model="ir.actions.act_window">
+
+    <field name="name">productstock Add</field>
+    <field name="res_model">product.stock</field>
+    <field name="view_mode">tree,form</field>
+</record>
+
+<menuitem
+    id="product_stock_submenus"
+    name="Product stock"
+    sequence="10"
+    action = "product_stock_action"
+    parent = "products_data_menu"/> 
+
+</odoo>

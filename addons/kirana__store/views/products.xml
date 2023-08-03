@@ -9,7 +9,7 @@
                     <form string="">
                         <header>
                             
-                            <button string="Email Send" name="send_email" type="object"  class="oe_highlight" />
+                            <!-- <button string="Email Send" name="send_email" type="object"  class="oe_highlight" /> -->
                             <!-- <button string="update info" name="school_profile_wizard_action" type="object"  class="oe_highlight" /> -->
 
                       </header> 
@@ -17,10 +17,11 @@
                             <group>
 
                                 <field name="product_name"/>
-                                 <field name="product_price"/>
-                                  <field name="product_quntity"/>
+                                <field name="quantity"/>
+                                 <!-- <field name="user"/> -->
+                                  <!-- <field name="product_quntity"/>
                                     <field name="totel"/> 
-                                    <field name="groceries"/> 
+                                    <field name="groceries"/>  -->
                             </group>
                         </sheet>
                     </form>
@@ -34,10 +35,11 @@
                     <tree string="">
 
                         <field name="product_name"/>
-                        <field name="product_price"/>
-                        <field name="product_quntity"/>
+                        <field name="quantity"/>
+                        <!-- <field name="user"/> -->
+                        <!-- <field name="product_quntity"/>
                         <field name="totel"/>  
-                        <field name="groceries"/>    
+                        <field name="groceries"/>     -->
                     </tree>
                 </field>
             </record>       
@@ -57,7 +59,7 @@
 
 <menuitem
     id="products_data_submenus"
-    name="products data"
+    name="Products Data"
     sequence="10"
     action = "products_data_action"
     parent = "products_data_menu" /> 

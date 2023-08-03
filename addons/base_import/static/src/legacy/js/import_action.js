@@ -537,7 +537,9 @@ var DataImport = AbstractAction.extend({
                             show_skip_record: showSkipRecord
                         })
                     );
-                } else if (fieldInfo.type === 'selection') {
+                } 
+
+                else if (fieldInfo.type === 'selection') {
                     self._rpc({
                         model: fieldInfo.comodel_name || fieldInfo.model_name,
                         method: 'fields_get',
@@ -556,7 +558,9 @@ var DataImport = AbstractAction.extend({
                         );
                         self.selectionFields[data.id] = values;
                     });
-                } else if ($optionsDiv.find('.o_import_create_option').length == 1) {
+
+                } 
+                else if ($optionsDiv.find('.o_import_create_option').length == 1) {
                     $optionsDiv.empty();
                 }
 
@@ -594,9 +598,9 @@ var DataImport = AbstractAction.extend({
                 // Format the tooltip.
                 formatSelection: function (object, container) {
                     var fieldTooltipString = `%(label)s: %(labelValue)s
-%(name)s: %(nameValue)s
-%(type)s: %(typeValue)s
-%(model)s: %(modelValue)s`;
+            %(name)s: %(nameValue)s
+            %(type)s: %(typeValue)s
+            %(model)s: %(modelValue)s`;
                     var tooltip = _.str.sprintf(fieldTooltipString, {
                         'label': _t("Label"), 'labelValue': object.text,
                         'name': _t("Name"), 'nameValue': object.id,

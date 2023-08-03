@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="product_qua_view_form" model="ir.ui.view" >
+        <field name="name">product_qua.view.form</field>
+        <field name="model">product.qua</field>
+        <field name="arch" type="xml">
+
+                    <form string="">
+
+                        <sheet>
+
+                            <group>
+
+                                <field name="p_name"/>
+                                <field name="p_quantity"/>
+                           
+                            </group>
+
+
+                            <notebook>
+                                <page name="demo_fields_liness" string="demos fields">
+                
+                                  
+                
+                                    <form string='demo fieldss'>
+                                                <group>
+                
+                                                    <field name="p_name"/>
+                                                    <field name="p_quantity"/>
+                                                    <!-- <field name="extdata"/> -->
+                                                    <!-- <field name="extdata2"/> -->
+                                                </group>
+                                    </form>
+                            </page>
+                        </notebook>   
+                   
+            </sheet>
+
+                    </form>
+                </field>
+        </record>   
+
+            <record id="product_qua_view_tree" model="ir.ui.view">
+                <field name="name">product_qua.view.tree</field>
+                <field name="model">product.qua</field>
+                <field name="arch" type="xml">
+                    <tree string="">
+
+                        <field name="p_name"/>
+                        <field name="p_quantity"/>
+                      
+                    </tree>
+                </field>
+            </record>  
+
+<!--       
+            <field name="body_html" type="html">
+                <p> Here are the product details </p>  
+            </field> -->
+
+
+
+<record id="product_qua_action" model="ir.actions.act_window">
+
+    <field name="name">productstock Add</field>
+    <field name="res_model">product.qua</field>
+    <field name="view_mode">tree,form</field>
+</record>
+
+<menuitem
+    id="product_qua_submenus"
+    name="Product qua"
+    sequence="10"
+    action = "product_qua_action"
+    parent = "products_data_menu"/> 
+
+</odoo>
