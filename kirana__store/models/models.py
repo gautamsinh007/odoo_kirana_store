@@ -23,7 +23,8 @@ class Saledata(models.Model):
     mail_send = fields.Char(string='your mail', default=lambda self: self.env.user.login)
     user = fields.Many2one('res.users', string='seller mail')
     date  = fields.Datetime(string='Need product')
-  
+    type = fields.Selection([('sale', 'Sale'),('purchase','Purchase')],string='Type')
+    
     def check_orm(self):
         templates_id = self.env.ref('kirana__store.send_products_email_template').id
         print(templates_id,'-=-=-=')
@@ -39,6 +40,16 @@ class ProductQuality(models.Model):
     price = fields.Char(string='price')   
     qty  = fields.Char(string='qty')    
     saledata = fields.Many2one('sale.data', string='saledata')    
-
-
-
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    

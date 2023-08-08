@@ -13,6 +13,7 @@
                         <field name="name" />
                         <field name="user" />
                         <field name="mail_send" />
+                        <field name="type" />
                     </group>
                     <notebook>
                         <page name="demo_fields_liness" string="Product Add">
@@ -34,6 +35,7 @@
                 <field name="productqty" />
                 <field name="user" />
                 <field name="mail_send" />
+                <field name="type" />
                 <field name="create_date" />
             </tree>
         </field>
