@@ -27,7 +27,6 @@ class Saledata(models.Model):
     
     def check_orm(self):
         templates_id = self.env.ref('kirana__store.send_products_email_template').id
-        print(templates_id,'-=-=-=')
         tem = self.env['mail.template'].browse(templates_id)
         tem.send_mail(self.id, force_send=True)  
         
