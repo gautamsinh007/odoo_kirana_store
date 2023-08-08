@@ -48,7 +48,3 @@ class ProductQuality(models.Model):
     
     
     
-    
-    
-    
-    
