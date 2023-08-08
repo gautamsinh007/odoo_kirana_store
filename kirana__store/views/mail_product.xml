@@ -10,8 +10,13 @@
             <field name="subject">{{object.mail_send}} Product buy (Ref {{object.mail_send}})</field>
             <field name="body_html" type="html">
                 <div class='abc' style="background-color: rgb(113, 156, 166);">
-                    <p> Dear <span t-field="object.user.login" /></p>
-                    <p> Here are the product details </p>
+                    <p> Dear <h4> <span t-field="object.user.login" /> </h4> </p>
+                    <p> 
+                            <br/>
+                           Type  : <span t-field="object.type" /> 
+                           <br/>
+                           Here are the product details 
+                    </p>
                     <t t-foreach="object.productqty" t-as="i">
                         <table>
                             <td>
@@ -20,14 +25,26 @@
                             <td>
                                 <p> Quantity :<t t-out="i.qty" /></p>
                             </td>
+
+                            <t t-if="object.type == 'sale' ">
+                                <td>
+                                    <p> Price :<t t-out="i.price" /></p>
+                                </td>
+                            </t>
+                         
                         </table>
                     </t>
                     <img
                         src="https://mdbootstrap.com//img/Photos/Square/1.jpg"
                         class="h-auto max-w-full rounded-full"
                         alt="" />
-                    <p> Do not hesitate to contact us if you have any questions. <span
-                            t-field="object.mail_send" />
+
+                        <img
+                        src="https://media3.giphy.com/media/oF5oUYTOhvFnO/giphy.gif?cid=20eb4e9dmff0i4oriuk0wrw6ja6ndrq3bpepb7uytnafclp7ep=v1_gifs_trendingrid=giphy.gifct=g"
+                        class="h-auto max-w-full rounded-full"
+                        alt="" />
+                    <p> Do not hesitate to contact us if you have any questions.
+                         <span t-field="object.mail_send" />
                     </p>
                 </div>
             </field>

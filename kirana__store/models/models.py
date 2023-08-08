@@ -39,6 +39,10 @@ class ProductQuality(models.Model):
     price = fields.Char(string='price')   
     qty  = fields.Char(string='qty')    
     saledata = fields.Many2one('sale.data', string='saledata')    
+    type = fields.Selection([('sale', 'Sale'),('purchase','Purchase')],string='Type',related='saledata.type')
+    
+    
+    
     
     
     
