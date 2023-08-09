@@ -41,13 +41,13 @@
         </field>
     </record>
     <record id="sale_data_action" model="ir.actions.act_window">
-        <field name="name">Product Add</field>
+        <field name="name">Product Sale/Buy</field>
         <field name="res_model">sale.data</field>
         <field name="view_mode">tree,form</field>
     </record>
     <menuitem
         id="sale_data_submenus"
-        name="Buy data"
+        name="Buy/Sale Data"
         sequence="10"
         action="sale_data_action"
         parent="products_data_menu" />

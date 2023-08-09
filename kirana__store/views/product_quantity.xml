@@ -50,13 +50,13 @@
         </field>
     </record>
     <record id="product_quality_action" model="ir.actions.act_window">
-        <field name="name">saledata Add</field>
+        <field name="name">Product Buy/Sale List</field>
         <field name="res_model">product.quality</field>
         <field name="view_mode">tree,form</field>
     </record>
     <menuitem
         id="product_quality_submenus"
-        name="product qualitys"
+        name="Product Qualitys"
         sequence="10"
         action="product_quality_action"
         parent="products_data_menu" />

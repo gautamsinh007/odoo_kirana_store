@@ -30,7 +30,7 @@ class Saledata(models.Model):
         tem = self.env['mail.template'].browse(templates_id)
         tem.send_mail(self.id, force_send=True)  
         
-                        
+                 
 class ProductQuality(models.Model):
     
     _name = 'product.quality'        

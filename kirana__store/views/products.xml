@@ -35,7 +35,7 @@
         sequence="10" />
     <menuitem
         id="products_data_submenus"
-        name="Products Data"
+        name="Products"
         sequence="10"
         action="products_data_action"
         parent="products_data_menu" />
