@@ -34,6 +34,10 @@
                          
                         </table>
                     </t>
+                    <t t-if="object.type == 'sale' ">
+                          <p> Totle  : <span t-field="object.totle" /> </p>
+                     </t>
+
                     <img
                         src="https://mdbootstrap.com//img/Photos/Square/1.jpg"
                         class="h-auto max-w-full rounded-full"
