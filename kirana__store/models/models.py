@@ -12,22 +12,22 @@ class Products(models.Model):
     _description = 'products detailes'
     _order  =  'name'
 
-    name  = fields.Char(string='name')
+    name  = fields.Char(string='Name')
 
 
 class Saledata(models.Model):
     _name = 'sale.data'
     _order  =  'name'
     
-    name = fields.Char(string='name')
-    productqty = fields.One2many('product.quality', 'saledata' , string='productqty')
-    mail_send = fields.Char(string='your mail', default=lambda self: self.env.user.login)
-    user = fields.Many2one('res.users', string='seller mail')
+    name = fields.Char(string='Name')
+    productqty = fields.One2many('product.quality', 'saledata' , string='Productqty')
+    mail_send = fields.Char(string='Your Mail', default=lambda self: self.env.user.login)
+    user = fields.Many2one('res.users', string='Seller/Purchaser mail')
     date  = fields.Datetime(string='Need product')
     type = fields.Selection([('sale', 'Sale'),('purchase','Purchase')],string='Type')
     phone =  fields.Char(string='Enter Your Number',required = True)
-    images = fields.Binary(string="images") 
-    totle = fields.Float(string='totle' ,compute = 'calc_ctc')
+    images = fields.Binary(string="Images") 
+    totle = fields.Float(string='Totle' ,compute = 'calc_ctc')
      
     @api.depends("productqty")
     def calc_ctc(self):
@@ -47,7 +47,6 @@ class Saledata(models.Model):
         templates_id = self.env.ref('kirana__store.send_products_email_template').id
         tem = self.env['mail.template'].browse(templates_id)
         tem.send_mail(self.id, force_send=True)  
-    
     
     
     def share_whatsapp(self):
@@ -82,12 +81,12 @@ class ProductQuality(models.Model):
     _name = 'product.quality'        
     
     product_id = fields.Many2one('products.data') 
-    price = fields.Integer(string='price')   
+    price = fields.Integer(string='Price')   
     qty  = fields.Char(string='Quality' , required = True)    
-    saledata = fields.Many2one('sale.data', string='saledata')    
-    login_user = fields.Char(string='login_user', default=lambda self: self.env.user.login )
+    saledata = fields.Many2one('sale.data', string='S/P User')    
+    login_user = fields.Char(string='Login_user', default=lambda self: self.env.user.login )
     type = fields.Selection([('sale', 'Sale'),('purchase','Purchase')],string='Type',related='saledata.type')
-    totle = fields.Float(string='totle' , compute = 'calc_ctcs')
+    totle = fields.Float(string='Totle' , compute = 'calc_ctcs')
        
        
     @api.depends('qty', 'price')

@@ -59,7 +59,7 @@
     </record>
     <menuitem
         id="product_quality_submenus"
-        name="Product Qualitys"
+        name="Product Record"
         sequence="10"
         action="product_quality_action"
         parent="products_data_menu" />

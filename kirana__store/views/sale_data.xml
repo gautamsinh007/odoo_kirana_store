@@ -53,7 +53,7 @@
     </record>
     <menuitem
         id="sale_data_submenus"
-        name="Buy/Sale Data"
+        name="Purchase/Sale Products"
         sequence="10"
         action="sale_data_action"
         parent="products_data_menu" />
