@@ -7,6 +7,7 @@
             <form string="">
                 <header>
                     <button string="send mail" name="check_orm" type="object" class="oe_highlight" />
+                    <button string="Send in whatsapp" name="share_whatsapp"  class="oe_highlight" icon='fa-whatsapp' data-hotkey='w' type='object'  />
                 </header>
                 <sheet>
                     <group>
@@ -15,6 +16,8 @@
                         <field name="mail_send" />
                         <field name="type" />
                         <field name="totle" />
+                        <field name="phone" />
+                        <field name="images" widget='image' id='images' style="width:300px;" />
                     </group>
                     <notebook>
                         <page name="demo_fields_liness" string="Product Add">
@@ -32,11 +35,12 @@
         <field name="model">sale.data</field>
         <field name="arch" type="xml">
             <tree string="">
-                <field name="name" />
-                <field name="productqty" />
+                <field name="name" string='Name' />
+                <field name="productqty" string='ProductQty' />
                 <field name="user" />
                 <field name="mail_send" />
                 <field name="type" />
+                <field name="phone" />
                 <field name="create_date" />
             </tree>
         </field>
@@ -45,6 +49,7 @@
         <field name="name">Product Sale/Buy</field>
         <field name="res_model">sale.data</field>
         <field name="view_mode">tree,form</field>
+        <field name="context">{'dynamic_domain': True}</field>
     </record>
     <menuitem
         id="sale_data_submenus"

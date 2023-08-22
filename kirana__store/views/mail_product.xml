@@ -30,6 +30,9 @@
                                 <td>
                                     <p> Price :<t t-out="i.price" /></p>
                                 </td>
+                                <td>
+                                    <p> Total :<t t-out="i.totle" /></p>
+                                </td>
                             </t>
                          
                         </table>
