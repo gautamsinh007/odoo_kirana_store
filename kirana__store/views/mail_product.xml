@@ -41,10 +41,10 @@
                           <p> Totle  : <span t-field="object.totle" /> </p>
                      </t>
 
-                    <img
+                    <!-- <img
                         src="https://mdbootstrap.com//img/Photos/Square/1.jpg"
                         class="h-auto max-w-full rounded-full"
-                        alt="" />
+                        alt="" /> -->
 
                         <img
                         src="https://media3.giphy.com/media/oF5oUYTOhvFnO/giphy.gif?cid=20eb4e9dmff0i4oriuk0wrw6ja6ndrq3bpepb7uytnafclp7ep=v1_gifs_trendingrid=giphy.gifct=g"
