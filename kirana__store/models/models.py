@@ -87,16 +87,36 @@ class ProductQuality(models.Model):
     login_user = fields.Char(string='Login_user', default=lambda self: self.env.user.login )
     type = fields.Selection([('sale', 'Sale'),('purchase','Purchase')],string='Type',related='saledata.type')
     totle = fields.Float(string='Totle' , compute = 'calc_ctcs')
-       
+    totle_sale = fields.Integer(string='Totle_sale',compute = 'totle_sales')
+    totle_purchas = fields.Integer(string='Totle_purchas', compute = 'totle_pur')       
+   
+   
+    @api.depends()
+    def totle_sales(self):
+        x = self.env['product.quality'].search([])
+        sale = []
+        for i in x:
+            print(i.totle, '....' , i.type )
+            if i.type == 'sale':
+                sale.append(i.totle) 
+        self.totle_sale = sum(sale)
+        
+    @api.depends()
+    def totle_pur(self):
+        x = self.env['product.quality'].search([])
+        pur =  []
+        for i in x:
+            print(i.totle, '....' , i.type )
+            if i.type == 'purchase':
+                pur.append(i.totle)            
+        self.totle_purchas = sum(pur)  
+   
        
     @api.depends('qty', 'price')
     def calc_ctcs(self):
-        # dd = []
         for ii in self:
-            # if int(qty):
             d = ii.price 
             qty = ii.qty
-            # if qty  and d:
             x = int(qty) * d 
             ii.totle = x   
            

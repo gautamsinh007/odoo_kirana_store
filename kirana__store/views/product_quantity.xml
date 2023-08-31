@@ -13,6 +13,8 @@
                         <field name="saledata" />
                         <field name="totle"/>
                         <field name="type"/>
+                        <field name="totle_sale"/>
+                        <field name="totle_purchas"/>
                     </group>
                     <notebook>
                         <page name="demo_fields_liness" string="demos fields" editable="botttom">
@@ -50,6 +52,8 @@
                 <field name="type"/>
                 <field name="totle"/>
                 <field name="create_date" />
+                <field name="totle_sale"/>
+                <field name="totle_purchas"/>
             </tree>
         </field>
     </record>
