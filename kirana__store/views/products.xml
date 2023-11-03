@@ -31,7 +31,7 @@
     </record>
     <menuitem
         id="products_data_menu"
-        name="Products"
+        name="Grocery Store"
         sequence="10" />
     <menuitem
         id="products_data_submenus"

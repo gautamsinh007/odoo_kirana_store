@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "Kirana Store",
+    'name': "Grocery Store",
     'sequence': 3,
     'summary': """
         Short (1 phrase/line) summary of the module's purpose, used as
         subtitle on modules listing or apps.openerp.com""",
 
     'description': "Kirana stores are shops that serve daily needs products and commonly used grocery items",
-   'summary': 'Kirana stores are shops that serve daily needs products and commonly used grocery items',     
+   'summary': 'Grocery Store are shops that serve daily needs products and commonly used grocery items',     
         
     'author': "Gautamsinh Makwana",
     'website': "https://www.yourcompany.com",
