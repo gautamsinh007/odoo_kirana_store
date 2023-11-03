@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "Grocery Store",
+    'name': "Grocery Store With Whatsapp",
     'sequence': 3,
     'summary': """
         Short (1 phrase/line) summary of the module's purpose, used as
